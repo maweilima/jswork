@@ -1,6 +1,8 @@
-let endseconds = new Date().getTime();
-var d = h = m = s = 0;
-var id = setInterval(seckill, 1000);
+var obj = new Date();
+var min = obj.getMinutes();
+let endseconds = new Date().getTime() + 60 * 1000 * (60 - min);
+let d = h = m = s = 0;
+let id = setInterval(seckill, 1000);
 function seckill() {
     let nowtime = new Date();
     let remaining = parseInt((endseconds - nowtime.getTime()) / 1000);
